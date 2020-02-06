@@ -4,12 +4,10 @@
 // console.log(min(0, -10)); // will output -10
 
 let min = function(n, n2) {
-  if (n > n2) {
+  if (n >= n2) {
     return n2;
-  } 
-  else {
-    return n;
   }
+    return n;
 };
 
 console.log(min(0, 10));
@@ -21,7 +19,9 @@ console.log(min(0, -10));
 
 let calculateCircumference = function(n) {
     let pi = 3.14;
+
     return 2 * pi * n;
+
 };
 
 console.log(calculateCircumference(5)); 
@@ -30,3 +30,17 @@ console.log(calculateCircumference(5));
 // Example Output:
 // console.log(searchString(“s”, “mississippi”)); // will output 4
 // console.log(searchString(“q”, “mississippi”)); // will output 0
+
+let searchString = function(chr, str) {
+    let numberOfCharactersFound = 0;
+
+    while (i = 0, i <= str.length -1, i++) {
+        if (str[i] == chr) {
+            numberOfCharactersFound++
+        }
+        return numberOfCharactersFound;
+    }
+};
+
+console.log(searchString("s", "mississippi"));
+console.log(searchString("q", "mississippi"));
